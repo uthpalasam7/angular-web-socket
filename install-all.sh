@@ -4,9 +4,13 @@ echo "Installing root dependencies..."
 npm install
 
 echo "Installing client dependencies..."
-npm install --prefix client
+cd client
+npm install
+cd ..
 
 echo "Installing server dependencies..."
-npm install --prefix server
+cd server
+npm install
+cd ..
 
 echo "All dependencies installed successfully!"
