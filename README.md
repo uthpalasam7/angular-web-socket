@@ -21,3 +21,14 @@ This app provides a basic Angular client with login and dashboard routes, and a 
    - The Angular client will start at `http://localhost:4200/`.
    - The Node.js server will start at `http://localhost:3000/`.
 
+## User Credentials
+
+Use the following credentials to log in to the app:
+
+- username: user1, password: pass1
+- username: user2, password: pass2
+- username: user3, password: pass3
+- username: user4, password: pass4
+- username: user5, password: pass5
+
+

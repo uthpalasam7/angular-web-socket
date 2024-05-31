@@ -10,7 +10,6 @@ export class UserService {
     { id: 3, username: 'user3', password: 'pass3' },
     { id: 4, username: 'user4', password: 'pass4' },
     { id: 5, username: 'user5', password: 'pass5' },
-    { id: 6, username: 'user6', password: 'pass6' }
   ];
 
   constructor() { }
