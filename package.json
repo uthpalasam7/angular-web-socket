@@ -5,7 +5,8 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && nodemon server.js",
-    "client": "cd client && ng serve"
+    "client": "cd client && ng serve",
+    "postinstall": "npm install --prefix client && npm install --prefix server"
   },
   "dependencies": {
     "nodemon": "^3.1.2"

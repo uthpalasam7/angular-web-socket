@@ -28,26 +28,24 @@ io.on('connection', (socket) => {
 
   // Increment connection count for the user
   if (!userConnections[userId]) {
-    userConnections[userId] = 0;
+    userConnections[userId] = [];
   }
-  userConnections[userId]++;
-
-  console.log(`User ${userId} connected (connections: ${userConnections[userId]})`); // Log connection with user ID
+  userConnections[userId].push(socket.id);
+  console.log(`User ${userId} connected (${userConnections[userId].length} connections)`);
 
   socket.on('logout', () => {
     console.log(`User ${userId} logged out`);
   });
 
   socket.on('disconnect', () => {
-    // Decrement connection count for the user
-    userConnections[userId]--;
-
-    console.log(`User ${userId} disconnected (connections: ${userConnections[userId]})`); // Log disconnection with user ID
+    // Remove socket ID from user's array
+    userConnections[userId] = userConnections[userId].filter(id => id !== socket.id);
+    console.log(`User ${userId} disconnected (${userConnections[userId].length} connections)`);
 
     // If no more connections for the user, log disconnect event
-    if (userConnections[userId] === 0) {
+    if (userConnections[userId].length === 0) {
       console.log(`User ${userId} disconnected all connections`);
-      delete userConnections[userId]; // Remove user from the tracking object
+      delete userConnections[userId]; // Remove user from tracking object
     }
   });
 });
