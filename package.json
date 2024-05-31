@@ -6,13 +6,9 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && nodemon server.js",
     "client": "cd client && ng serve",
-    "install-all": "./install-all.sh"
+    "postinstall": "./install-all.sh"
   },
   "dependencies": {
     "nodemon": "^3.1.2"
-  },
-  "workspaces": [
-    "client",
-    "server"
-  ]
+  }
 }
