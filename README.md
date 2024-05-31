@@ -4,7 +4,7 @@ A simple Angular and Node.js app with WebSocket integration.
 
 ## Description
 
-This app provides a basic Angular client with login and dashboard routes, and a Node.js server using Socket.io for real-time communication. User connections, logouts, and disconnections are logged, with disconnections logged only when all user connections are closed.
+This app provides a basic Angular client with login and dashboard routes, and a Node.js server using Socket.io for real-time communication. User connections, logouts, and disconnections are logged.
 
 ## Requirements
 
